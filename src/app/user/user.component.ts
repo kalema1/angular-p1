@@ -33,6 +33,6 @@ export class UserComponent {
 
   onSelectUser() {
     const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
-    this.selectedUser.set(DUMMY_USERS[randomIndex]);
+    // this.selectedUser.set(DUMMY_USERS[randomIndex]);
   }
 }
