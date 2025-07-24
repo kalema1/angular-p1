@@ -2,6 +2,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 // const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
 
+type User = {
+  id: string;
+  name: string;
+  avatar: string;
+};
+
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -10,11 +16,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './user.component.css',
 })
 export class UserComponent {
-  @Input({ required: true }) user!: {
-    id: string;
-    name: string;
-    avatar: string;
-  };
+  @Input({ required: true }) user!: User;
 
   @Output() select = new EventEmitter();
   // getter method used to get image path. used as aproperty in html
