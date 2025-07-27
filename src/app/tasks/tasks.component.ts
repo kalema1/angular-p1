@@ -10,7 +10,7 @@ import { TaskComponent } from '../task/task.component';
 })
 export class TasksComponent {
   @Input({ required: true }) name!: string;
-  @Input({ required: true }) id!: string;
+  @Input({ required: true }) userId!: string;
 
   tasks = [
     {
@@ -37,4 +37,8 @@ export class TasksComponent {
       dueDate: '2024-06-15',
     },
   ];
+
+  get selectedUserTask() {
+    return this.tasks.filter((task) => task.userId === this.userId);
+  }
 }
