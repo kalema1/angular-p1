@@ -8,7 +8,12 @@
   </header>
 
   <ul>
-    <li></li>
+    @for(task of tasks; track task.id) {
+
+    <li>
+      <app-task />
+    </li>
+    }
   </ul>
 </section>
 >
