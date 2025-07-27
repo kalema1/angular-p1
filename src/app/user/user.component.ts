@@ -17,6 +17,7 @@ type User = {
 })
 export class UserComponent {
   @Input({ required: true }) user!: User;
+  @Input() isSelected!: boolean;
 
   @Output() select = new EventEmitter();
   // getter method used to get image path. used as aproperty in html
