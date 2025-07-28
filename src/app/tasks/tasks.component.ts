@@ -41,4 +41,9 @@ export class TasksComponent {
   get selectedUserTask() {
     return this.tasks.filter((task) => task.userId === this.userId);
   }
+
+  onCompleteTask(taskId: string) {
+    console.log(`Task with ID ${taskId} completed!`);
+    // Here you can implement the logic to handle task completion, e.g., removing it from the list
+  }
 }
