@@ -43,7 +43,6 @@ export class TasksComponent {
   }
 
   onCompleteTask(taskId: string) {
-    console.log(`Task with ID ${taskId} completed!`);
-    // Here you can implement the logic to handle task completion, e.g., removing it from the list
+    this.tasks.filter((task) => task.id !== taskId);
   }
 }
